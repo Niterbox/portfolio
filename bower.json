@@ -1,12 +1,12 @@
 {
   "name": "HTML",
+  "homepage": "https://github.com/Niterbox/portfolio",
   "authors": [
     "Niterbox <silva.johnny10@gmail.com>"
   ],
   "description": "",
   "main": "",
   "license": "MIT",
-  "homepage": "",
   "private": true,
   "ignore": [
     "**/.*",
