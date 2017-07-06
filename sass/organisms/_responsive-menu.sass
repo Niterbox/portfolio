@@ -1,0 +1,84 @@
+.responsive-menu
+	position: fixed
+	width: 150px
+	height: 100%
+	left: -150px
+	top: 0
+
+	+gradient(0deg, $green, $blue)
+
+	&.active
+		+transition(.2s)
+		left: 0
+
+	ul
+		li
+			border-bottom: 1px solid rgba($white, .3)
+			a
+				padding: 7px
+				display: block
+				color: $white
+
+				&:hover,
+				&:focus
+					background-color: rgba($black, .4)
+
+.layout
+	&.active
+		+transition(.2s)
+		padding-left: 150px
+
+.toggle
+	width: 30px
+	height: 30px
+	float: right
+	position: relative
+	overflow: hidden
+	display: none
+	+transition(.2s)
+
+	+breakpoint($tablet)
+		display: block
+
+	+breakpoint($smartphone)
+		display: block	
+
+	&:hover
+		span
+			&:nth-child(1)
+				top: 6px
+
+			&:nth-child(3)
+				top: 20px
+
+	&.active
+		span
+			&:nth-child(1)
+				top: 12px
+				+rotate(45deg)
+
+			&:nth-child(3)
+				top: 12px
+				+rotate(135deg)
+
+			&:nth-child(2)
+				display: none
+
+	span
+		width: 100%
+		height: 1px
+		content: ""
+		display: block
+		background-color: $white
+		position: absolute
+		left: 0
+		+transition(.2s)
+
+		&:nth-child(1)
+			top: 4px
+
+		&:nth-child(2)
+			top: 13px
+
+		&:nth-child(3)
+			top: 22px

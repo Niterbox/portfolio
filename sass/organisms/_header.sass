@@ -42,6 +42,20 @@ header
 					a 
 						color: $white
 						text-transform: uppercase
+
+						&:after
+							content: ""
+							display: table
+							margin: 5px auto 0
+							width: 0%
+							height: 2px
+							background-color: $white
+							+transition(.3s)
+
+						&:hover
+							&:after
+								width: 40%
+
 		.social
 			li
 				margin: 0 5px 0 0
